@@ -33,7 +33,7 @@
                 <input type="button" class="button mathbutton" value="="  onclick="evaluateExpression()" >
                 <input type="button" class="button mathbutton" value="/" id="divide" onclick="displayNum('/')" >
                 <br/>
-
+                <input type="button" class="button mathbutton" value="D" id="delete" onclick="backspace()" >
 
 
 
@@ -53,6 +53,9 @@
 
     function evaluateExpression(){
      txtdisplay.value = eval(txtdisplay.value);
+    }
+    function backspace(){
+       txtdisplay.value = txtdisplay.value.slice(0,-1)
     }
 </script>
 </html>
