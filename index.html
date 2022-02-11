@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./calculator.css">
+</head>
+<body>
+    <div class="container">
+        <div class="cal-box">
+            <form name="calculator">
+                <input type="text" id="txtdisplay" placeholder="0" readonly >
+                <br/>
+                <input type="button" class="button" id="seven" onclick="displayNum('7')" value="7" >
+                <input type="button" class="button" id="eight" onclick="displayNum('8')" value="8">
+                <input type="button" class="button" id="nine" onclick="displayNum('9')" value="9" >
+                <input type="button" class="button mathbutton" id="plus" onclick="displayNum('+')" value="+" >
+                <br/>
+                <input type="button" class="button" id="four" onclick="displayNum('4')" value="4" >
+                <input type="button" class="button" id="five" onclick="displayNum('5')" value="5">
+                <input type="button" class="button" id="six" onclick="displayNum('6')" value="6" >
+                <input type="button" class="button mathbutton" id="minus" onclick="displayNum('-')" value="-" >
+                <br/>
+                <input type="button" class="button" value="1" id="one" onclick="displayNum('1')" >
+                <input type="button" class="button" value="2" id="two" onclick="displayNum('2')">
+                <input type="button" class="button" value="3" id="three" onclick="displayNum('3')" >
+                <input type="button" class="button mathbutton" value="*" id="multiple" onclick="displayNum('*')" >
+                <br/>
+                <input type="button" class="button clearbutton" value="C" id="clear" onclick="ClearNum()" >
+                <input type="button" class="button" value="0" id="zero" onclick="displayNum('0')">
+                <input type="button" class="button mathbutton" value="="  onclick="evaluateExpression()" >
+                <input type="button" class="button mathbutton" value="/" id="divide" onclick="displayNum('/')" >
+                <br/>
+
+
+
+
+            </form>
+
+        </div>
+    </div>
+</body>
+<script>
+    function displayNum(num){
+        txtdisplay.value += num
+    }
+
+    function ClearNum(){
+        txtdisplay.value=""
+    }
+
+    function evaluateExpression(){
+     txtdisplay.value = eval(txtdisplay.value);
+    }
+</script>
+</html>
